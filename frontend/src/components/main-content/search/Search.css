@@ -117,7 +117,7 @@
 
 .service-icon,
 .result-duration {
-  position: absolute;
+  position: relative;
   bottom: 8px;
   height: 24px;
   display: flex;
