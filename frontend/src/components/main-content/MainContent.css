@@ -1,0 +1,65 @@
+.main-content {
+  padding: 20px;
+  color: var(--color-text);
+  box-sizing: border-box;
+}
+
+.main-content.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  height: 100%;
+}
+
+.main-content.not-authenticated {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.auth-message {
+  text-align: center;
+  background-color: var(--color-secondary);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.auth-message h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.auth-message p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: var(--color-text-muted);
+}
+
+.login-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}

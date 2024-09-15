@@ -1,0 +1,154 @@
+/* File: frontend/src/components/main-content/library/Library.css */
+
+.library {
+  padding: 20px;
+}
+
+.playlist-creator, .playlists {
+  margin-bottom: 20px;
+}
+
+.search-inputs {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-secondary);
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  color: var(--color-text);
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.search-button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: var(--color-accent);
+}
+
+.playlists ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.playlists li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.3s ease;
+}
+
+.playlists li.editing {
+  background-color: var(--color-secondary);
+}
+
+.playlists li:last-child {
+  border-bottom: none;
+}
+
+.playlists li:hover {
+  background-color: var(--color-secondary);
+}
+
+.playlist-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist-name {
+  font-weight: bold;
+}
+
+.track-count {
+  font-size: 0.8em;
+  color: var(--color-text-muted);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button, .delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.edit-button {
+  color: var(--color-text);
+}
+
+.delete-button {
+  color: #e74c3c;
+}
+
+.edit-button:hover, .delete-button:hover {
+  color: var(--color-accent);
+}
+
+.edit-form {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.cancel-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .search-inputs, .edit-form {
+    flex-direction: column;
+  }
+
+  .search-input, .search-button, .cancel-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .button-group {
+    justify-content: flex-end;
+  }
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9em;
+  margin-top: 5px;
+}

@@ -1,0 +1,18 @@
+.player {
+  height: var(--player-height);
+  background-color: var(--color-secondary);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-content {
+  text-align: center;
+}
+
+.player-message {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin: 0;
+}

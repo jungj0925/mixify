@@ -1,0 +1,147 @@
+/* Add this to your existing Sidebar.css file or create it if it doesn't exist */
+
+.sidebar-login-button {
+  width: 80%; /* Reduced width to allow for side margins */
+  padding: 10px 15px;
+  margin: 20px auto 0; /* Center the button and keep top margin */
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block; /* Ensures the margin auto works for centering */
+}
+
+.sidebar-login-button:hover {
+  background-color: var(--color-accent);
+}
+
+/* If your sidebar has a dark background, you might want to adjust text color */
+.sidebar-dark .sidebar-login-button {
+  color: #fff;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  height: calc(100vh - var(--player-height));
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.sidebar-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  padding: 20px;
+  text-align: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.nav-links li {
+  margin-bottom: 5px;
+}
+
+.nav-links a {
+  display: block;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 12px 20px;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--color-primary);
+}
+
+.profile-section {
+  padding: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.profile-info {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.display-name {
+  font-weight: bold;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logout-button {
+  background-color: transparent;
+  color: var(--color-text);
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+  margin: 0px, 10px;
+  transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+  color: var(--color-primary);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .nav-links li {
+    margin-bottom: 0;
+  }
+
+  .nav-links a {
+    padding: 15px 10px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    border-left: none;
+    border-bottom: 4px solid var(--color-primary);
+  }
+
+  .profile-section {
+    justify-content: center;
+  }
+}

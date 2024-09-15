@@ -1,0 +1,365 @@
+/* Playlist View Styles */
+.playlist-view {
+  padding: 20px;
+  padding-bottom: 80px; /* Add space for fixed player */
+}
+
+/* Player Controls */
+.player-controls {
+  height: var(--player-height);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.player-controls button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.player-controls button:disabled {
+  color: #777;
+  cursor: not-allowed;
+}
+
+.player-controls button:hover:not(:disabled) {
+  color: var(--color-accent);
+}
+
+/* Now Playing Track Info */
+.now-playing {
+  position: absolute;
+  left: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+/* Tracklist Styles */
+.track-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.track-item:hover {
+  background-color: var(--color-secondary);
+}
+
+.track-info {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.track-number {
+  width: 30px;
+  text-align: right;
+  margin-right: 10px;
+  color: var(--color-text-secondary);
+}
+
+.track-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.track-details {
+  flex-grow: 1;
+}
+
+.track-name-container {
+  display: flex;
+  align-items: center;
+}
+
+.track-name {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.track-artist {
+  color: var(--color-text-secondary);
+  font-size: 0.9em;
+}
+
+/* Playing Track Styling */
+.track-item.playing {
+  background-color: var(--color-accent-light);
+  color: white;
+}
+
+/* Add Song Button */
+.add-song-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.add-song-button:hover {
+  background-color: var(--color-accent-dark);
+}
+
+.playlist-view {
+  padding: 20px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.back-button svg {
+  margin-right: 5px;
+}
+
+.track-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.track-item:hover {
+  background-color: var(--color-secondary);
+}
+
+.track-info {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.track-number {
+  width: 30px;
+  text-align: right;
+  margin-right: 10px;
+  color: var(--color-text-secondary);
+}
+
+.track-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.placeholder-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-secondary);
+  color: var(--color-text-muted);
+}
+
+.track-details {
+  flex-grow: 1;
+}
+
+.track-name-container {
+  display: flex;
+  align-items: center;
+}
+
+.track-name {
+  font-weight: bold;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.service-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-left: 0px;
+  top: -1px; /* Slight adjustment to align with text */
+}
+
+.service-icon svg {
+  font-size: 16px;
+}
+
+.service-icon.spotify svg {
+  color: #1DB954; /* Spotify's brand color */
+}
+
+.service-icon.apple svg {
+  color: #FC3C44;
+}
+
+.service-icon.youtube svg {
+  color: #FF0000;
+}
+
+.service-icon.soundcloud svg {
+  color: #FF7700;
+}
+
+.track-artist {
+  color: var(--color-text-secondary);
+  font-size: 0.9em;
+}
+
+.track-actions {
+  display: flex;
+  align-items: center;
+}
+
+.play-button,
+.delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  margin: 0 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 0;
+}
+
+.play-button,
+.delete-button {
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+.play-button {
+  color: var(--color-text);
+}
+
+.delete-button {
+  color: #e74c3c;
+}
+
+.play-button:hover,
+.delete-button:hover {
+  color: var(--color-accent);
+}
+
+.add-song-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.add-song-button:hover {
+  background-color: var(--color-accent-dark);
+}
+
+.add-song-button svg {
+  margin-right: 8px;
+}
+
+.now-playing {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.now-playing-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.now-playing-image {
+  margin-top: 7.5px;
+  width: 55px;
+  height: 55px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.track-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.track-title {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.track-artist,
+.track-album {
+  margin: 0px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.controls-wrapper {
+  display: flex;
+  gap: -5px;
+  z-index: 100;
+}
+
+
+.controls-wrapper button.active {
+  color: #007BFF; /* Highlight active shuffle/repeat buttons */
+}
+
+.controls-wrapper button:disabled {
+  color: #ccc;
+}
