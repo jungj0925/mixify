@@ -68,3 +68,5 @@ package-lock.json
 
 # optional: if you're using TypeScript
 *.tsbuildinfo
+
+.env.local
